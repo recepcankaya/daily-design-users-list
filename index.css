@@ -1,0 +1,53 @@
+.input-container {
+  position: relative;
+}
+.bi-search {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+}
+input {
+  padding: 5px;
+}
+input::placeholder {
+  font-weight: 500;
+}
+input[type=text] {
+  padding-left: 30px;
+}
+img {
+  width: auto;
+  height: 125px;
+  border-radius: 25%;
+}
+input:focus{
+  outline: none;
+}
+.img-container {
+  padding: 30px;
+  position: relative;
+}
+.img-container:hover {
+  outline: 1px solid grey;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.text {
+  position: absolute;
+  right: 40px;
+  top: 23px;
+}
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.627);
+  font-weight: 600;
+}
+li:hover {
+  color: #E2E9F9;
+  background-color: #87A0CE;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a:hover {
+  color:#E2E9F9;
+}
