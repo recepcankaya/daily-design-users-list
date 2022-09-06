@@ -1,19 +1,20 @@
 const getInput = document.querySelector("#search-input")
 // console.log(getInput)
-const getNames = document.querySelectorAll(".name")
-// console.log(getNames)
-const container = document.querySelector(".img-container")
+const container = document.querySelectorAll(".img-container")
 
-getInput.addEventListener("input", () => {
-  const inputValue = getInput.value.toLowerCase()
+getInput.addEventListener("input", filtered)
+
+function filtered() {
+  const inputValue = getInput.value.toUpperCase()
   // console.log(inputValue)
 
-  getNames.forEach((element) => {
-    let text = element.textContent
-    if (text.toLowerCase().includes(inputValue.toLowerCase())) {
-      container.style.display = ""
+  for (let i = 0; i < container.length; i++) {
+    let name = container[i].querySelector(".name")
+
+    if (name.innerHTML.toUpperCase().indexOf(inputValue) > -1) {
+      container[i].style.display = ""
     } else {
-      container.style.display = "none"
+      container[i].style.display = "none"
     }
-  })
-})
+  }
+}
